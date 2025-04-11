@@ -1,0 +1,98 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { /* Define CSS variables for cursor position */
+    --cursor-x: 50vw;
+    --cursor-y: 50vh;
+  }
+
+  body {
+    /* Apply new font families */
+    @apply bg-space-dark text-gray-200 font-body;
+    /* Apply multiple backgrounds: base color, nebula, geometric, stars */
+    background-color: theme('colors.space-dark');
+    /* Added geometric pattern */
+    background-image: theme('backgroundImage.geometric-pattern'), theme('backgroundImage.nebula-gradient'), theme('backgroundImage.stars-pattern');
+    background-attachment: fixed, fixed, fixed; /* Keep backgrounds fixed */
+    background-size: theme('backgroundSize.geo-size'), cover, auto; /* Sizes for each layer */
+    background-position: 0 0, center, 0 0; /* Position each layer */
+
+    /* Custom Cursor - Hide default globally */
+    cursor: none;
+  }
+
+  /* Ensure interactive elements also hide the default cursor */
+  a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label[for] {
+    @apply cursor-none;
+  }
+
+   /* Custom cursor style - Use CSS variables */
+  body::after {
+    content: '';
+    position: fixed;
+    left: var(--cursor-x); /* Use CSS variable */
+    top: var(--cursor-y);  /* Use CSS variable */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: theme('colors.accent-teal');
+    box-shadow: 0 0 8px theme('colors.accent-teal'), 0 0 12px theme('colors.accent-teal/70');
+    pointer-events: none; /* Prevent cursor from interfering with clicks */
+    z-index: 9999; /* Ensure it's on top */
+    transform: translate(-50%, -50%); /* Center the dot on the cursor position */
+    transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease, transform 0.05s linear; /* Smooth transitions, faster position update */
+  }
+
+  /* Removed the CSS-only hover effect attempt for the custom cursor */
+
+
+  /* Star animation layer */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: theme('backgroundImage.stars-pattern');
+    background-position: 0 0;
+    background-repeat: repeat;
+    animation: stars 150s linear infinite;
+    opacity: 0.6;
+    z-index: -1;
+    pointer-events: none; /* Make sure it doesn't block interactions */
+  }
+
+  /* Apply heading font globally */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .text-glow-strong {
+    text-shadow: 0 0 5px theme('colors.accent-teal'),
+                 0 0 10px theme('colors.accent-teal'),
+                 0 0 15px theme('colors.accent-pink/50%'),
+                 0 0 20px theme('colors.accent-purple/50%');
+  }
+
+  .button-glow-animated {
+     @apply transition-all duration-300 ease-in-out font-heading; /* Use heading font for buttons */
+     box-shadow: 0 0 10px theme('colors.accent-teal/40%'), 0 0 15px theme('colors.accent-teal/20%');
+     animation: subtle-glow 4s ease-in-out infinite alternate;
+  }
+   .button-glow-animated:hover {
+      box-shadow: 0 0 20px theme('colors.accent-teal/70%'), 0 0 35px theme('colors.accent-teal/50%');
+      transform: scale(1.03);
+   }
+
+   .card-base {
+      @apply bg-space-mid/80 backdrop-blur-sm border border-space-light/40 rounded-lg shadow-xl transition-all duration-300;
+   }
+   .card-hover-glow {
+      @apply hover:border-accent-teal/60 hover:shadow-[0_0_20px_theme('colors.accent-teal/30%'),0_0_35px_theme('colors.accent-pink/20%')];
+   }
+}

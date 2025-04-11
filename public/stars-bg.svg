@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="1000px" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient id="starGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0"/>
+        </radialGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <rect width="100%" height="100%" fill="none"/>
+    <!-- Generate random stars -->
+    <g id="stars-group">
+        <!-- Example stars - script would generate many more -->
+        <circle cx="100" cy="150" r="1.2" fill="url(#starGradient)" opacity="0.8" filter="url(#glow)"/>
+        <circle cx="300" cy="50" r="0.8" fill="url(#starGradient)" opacity="0.6"/>
+        <circle cx="500" cy="250" r="1.5" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="750" cy="100" r="1.0" fill="url(#starGradient)" opacity="0.7"/>
+        <circle cx="900" cy="350" r="0.7" fill="url(#starGradient)" opacity="0.5"/>
+        <circle cx="50" cy="450" r="1.3" fill="url(#starGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="250" cy="550" r="0.9" fill="url(#starGradient)" opacity="0.65"/>
+        <circle cx="450" cy="650" r="1.1" fill="url(#starGradient)" opacity="0.75"/>
+        <circle cx="650" cy="750" r="1.4" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="850" cy="850" r="0.6" fill="url(#starGradient)" opacity="0.45"/>
+         <circle cx="120" cy="700" r="1.2" fill="url(#starGradient)" opacity="0.8" filter="url(#glow)"/>
+        <circle cx="320" cy="900" r="0.8" fill="url(#starGradient)" opacity="0.6"/>
+        <circle cx="530" cy="800" r="1.5" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="710" cy="600" r="1.0" fill="url(#starGradient)" opacity="0.7"/>
+        <circle cx="940" cy="500" r="0.7" fill="url(#starGradient)" opacity="0.5"/>
+         <circle cx="20" cy="950" r="1.3" fill="url(#starGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="210" cy="300" r="0.9" fill="url(#starGradient)" opacity="0.65"/>
+        <circle cx="410" cy="400" r="1.1" fill="url(#starGradient)" opacity="0.75"/>
+        <circle cx="610" cy="200" r="1.4" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="810" cy="10" r="0.6" fill="url(#starGradient)" opacity="0.45"/>
+        <!-- Add many more stars randomly positioned -->
+         <circle cx="150" cy="850" r="1.2" fill="url(#starGradient)" opacity="0.8" filter="url(#glow)"/>
+        <circle cx="350" cy="250" r="0.8" fill="url(#starGradient)" opacity="0.6"/>
+        <circle cx="550" cy="50" r="1.5" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="780" cy="300" r="1.0" fill="url(#starGradient)" opacity="0.7"/>
+        <circle cx="950" cy="650" r="0.7" fill="url(#starGradient)" opacity="0.5"/>
+        <circle cx="80" cy="750" r="1.3" fill="url(#starGradient)" opacity="0.85" filter="url(#glow)"/>
+        <circle cx="280" cy="850" r="0.9" fill="url(#starGradient)" opacity="0.65"/>
+        <circle cx="480" cy="950" r="1.1" fill="url(#starGradient)" opacity="0.75"/>
+        <circle cx="680" cy="50" r="1.4" fill="url(#starGradient)" opacity="0.9" filter="url(#glow)"/>
+        <circle cx="880" cy="150" r="0.6" fill="url(#starGradient)" opacity="0.45"/>
+    </g>
+    <!-- You can use JavaScript to generate many more stars dynamically if needed -->
+</svg>
