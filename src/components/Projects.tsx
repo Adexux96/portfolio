@@ -18,7 +18,7 @@ const Projects = () => {
       imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080', // Keeping the placeholder for this one
       liveUrl: 'https://unpocodetecnologia.es',
       githubUrl: '#',
-      tags: ['Blog', 'PHP', 'SEO', 'Content Creation', 'Web Development'],
+      tags: ['PHP', 'SEO', 'Content Creation', 'Web Development'],
     },
     {
       title: 'Rengoku.es',
@@ -40,11 +40,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="card-base group [perspective:1000px] transform transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_35px_theme('colors.accent-pink/60%'),0_0_50px_theme('colors.accent-purple/40%')] hover:border-accent-teal/80"
+              className="card-base group md:[perspective:1000px] transform transition-all duration-500 hover:scale-[1.02] md:hover:scale-[1.03] hover:shadow-[0_0_20px_theme('colors.accent-pink/40%'),0_0_35px_theme('colors.accent-purple/30%')] md:hover:shadow-[0_0_35px_theme('colors.accent-pink/60%'),0_0_50px_theme('colors.accent-purple/40%')] hover:border-accent-teal/60 md:hover:border-accent-teal/80"
             >
-              <div className="relative h-56 w-full overflow-hidden rounded-t-lg transform transition-transform duration-500 group-hover:[transform:rotateY(8deg)_translateX(8px)_scale(1.05)] border-b-2 border-accent-teal/30 group-hover:border-accent-teal/70">
-                 <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 ease-in-out overflow-hidden rounded-t-lg">
-                    <div className="absolute inset-[-50%] w-[200%] h-[200%] bg-gradient-radial from-accent-pink/40 via-accent-purple/30 to-transparent animate-portal-swirl"></div>
+              <div className="relative h-56 w-full overflow-hidden rounded-t-lg transform transition-transform duration-500 md:group-hover:[transform:rotateY(8deg)_translateX(8px)_scale(1.05)] border-b-2 border-accent-teal/30 group-hover:border-accent-teal/70">
+                 <div className="absolute inset-0 opacity-0 group-hover:opacity-20 md:group-hover:opacity-30 transition-opacity duration-700 ease-in-out overflow-hidden rounded-t-lg">
+                    <div className="absolute inset-[-50%] w-[200%] h-[200%] bg-gradient-radial from-accent-pink/40 via-accent-purple/30 to-transparent md:animate-portal-swirl"></div>
                  </div>
                  <img
                     src={project.imageUrl}

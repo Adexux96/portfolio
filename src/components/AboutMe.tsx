@@ -1,4 +1,3 @@
-import React from 'react';
 import { User, Code, Rocket } from 'lucide-react'; // Example icons
 
 const AboutMe = () => {
@@ -13,10 +12,10 @@ const AboutMe = () => {
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <p className="text-lg mb-4 leading-relaxed">
-              Hello! I'm Adrian, a passionate Full Stack Developer navigating the vast universe of web technologies. My mission is to build seamless, scalable, and visually stunning digital experiences.
+            Hey, I'm Adrián, a Full Stack and Game Developer with a passion for building seamless, scalable, and visually polished web experiences and games full of creativity.
             </p>
             <p className="text-lg mb-4 leading-relaxed">
-              With a strong foundation in both frontend artistry and backend logic, I enjoy bringing complex ideas to life, transforming challenges into elegant solutions. I thrive in collaborative environments and am always eager to learn and explore new frontiers in tech.
+            With a solid handle on both frontend and backend, I enjoy turning complex ideas into clean, efficient solutions. I'm all about collaboration, staying curious, and constantly pushing to learn and grow with the ever-evolving tech landscape.
             </p>
             <div className="flex justify-center md:justify-start space-x-4 mt-6">
               <span className="inline-flex items-center bg-space-mid px-3 py-1 rounded-full text-sm font-medium text-gray-300">

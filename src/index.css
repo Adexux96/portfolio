@@ -21,35 +21,36 @@
     background-attachment: fixed, fixed, fixed; /* Keep backgrounds fixed */
     background-size: theme('backgroundSize.geo-size'), cover, auto; /* Sizes for each layer */
     background-position: 0 0, center, 0 0; /* Position each layer */
-
-    /* Custom Cursor - Hide default globally */
-    cursor: none;
   }
 
-  /* Ensure interactive elements also hide the default cursor */
-  a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label[for] {
-    @apply cursor-none;
-  }
+  /* Show custom cursor only on desktop */
+  @media (min-width: 768px) {
+    body {
+      cursor: none;
+    }
+    
+    a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label[for] {
+      @apply cursor-none;
+    }
 
-   /* Custom cursor style - Use CSS variables */
-  body::after {
-    content: '';
-    position: fixed;
-    left: var(--cursor-x); /* Use CSS variable */
-    top: var(--cursor-y);  /* Use CSS variable */
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: theme('colors.accent-teal');
-    box-shadow: 0 0 8px theme('colors.accent-teal'), 0 0 12px theme('colors.accent-teal/70');
-    pointer-events: none; /* Prevent cursor from interfering with clicks */
-    z-index: 9999; /* Ensure it's on top */
-    transform: translate(-50%, -50%); /* Center the dot on the cursor position */
-    transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease, transform 0.05s linear; /* Smooth transitions, faster position update */
+    body::after {
+      content: '';
+      position: fixed;
+      left: var(--cursor-x);
+      top: var(--cursor-y);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: theme('colors.accent-teal');
+      box-shadow: 0 0 8px theme('colors.accent-teal'), 0 0 12px theme('colors.accent-teal/70');
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.1s ease, height 0.1s ease, background-color 0.1s ease, transform 0.05s linear;
+    }
   }
 
   /* Removed the CSS-only hover effect attempt for the custom cursor */
-
 
   /* Star animation layer */
   body::before {
