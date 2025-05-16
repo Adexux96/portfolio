@@ -1,11 +1,7 @@
-import React from 'react';
 import {
-  BriefcaseIcon,
   CodeIcon,
   DatabaseIcon,
   LayoutDashboardIcon,
-  Gamepad2Icon, // Added for Game Dev
-  BoxIcon, // Added for 3D Modelling (using Box as a placeholder)
 } from 'lucide-react';
 
 const Skills = () => {
@@ -13,7 +9,7 @@ const Skills = () => {
     {
       name: 'Frontend Development',
       icon: <LayoutDashboardIcon className="w-6 h-6 text-accent-teal" />,
-      skills: ['JavaScript', 'React', 'HTML', 'CSS', 'Tailwind CSS'],
+      skills: ['JavaScript', 'React', 'HTML', 'CSS'],
     },
     {
       name: 'Backend Development',
@@ -24,16 +20,6 @@ const Skills = () => {
       name: 'Databases',
       icon: <DatabaseIcon className="w-6 h-6 text-accent-purple" />,
       skills: ['SQL', 'NoSQL', 'MongoDB'],
-    },
-    {
-      name: 'Creative & Game Dev', // New Category
-      icon: <Gamepad2Icon className="w-6 h-6 text-yellow-400" />, // Example color
-      skills: ['Luau (Roblox)', 'Blender (3D Modelling)'], // Added new skills
-    },
-    {
-      name: 'DevOps & Tools',
-      icon: <BriefcaseIcon className="w-6 h-6 text-gray-400" />,
-      skills: ['Git', 'CI/CD', 'Docker'],
     },
   ];
 

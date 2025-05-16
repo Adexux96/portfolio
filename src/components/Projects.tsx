@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { Github, Star, Rocket } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -55,7 +55,11 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 text-gray-200 relative">
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl font-bold font-heading text-center mb-16 text-accent-teal text-glow-strong animate-pulse-slow">Project Portals</h2>
+        <h2 className="text-4xl font-bold font-heading text-center mb-16 text-accent-teal text-glow-strong animate-pulse-slow">
+          <Star size={28} className="text-accent-pink inline-block mr-2 animate-pulse-slow" />
+          Project Portals
+          <Star size={28} className="text-accent-purple inline-block ml-2 animate-pulse-slow" />
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {projects.map((project, index) => (
@@ -97,9 +101,9 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-accent-teal transition duration-300 flex items-center text-sm font-body"
-                    aria-label={`Live demo of ${project.title}`}
+                    aria-label={`Launch ${project.title}`}
                   >
-                    <ExternalLink size={16} className="mr-1" /> Live Demo
+                    <Rocket size={16} className="mr-1" /> Launch
                   </a>
                   {project.githubUrl && project.githubUrl !== '#' && (
                     <a
