@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
@@ -6,8 +5,7 @@ const Projects = () => {
     {
       title: 'ToonSnap.art',
       description: 'AI-powered platform transforming photos into cartoon styles. Built with modern web technologies.',
-      // Reference image from public folder
-      imageUrl: '/toonsnap.webp', // Assuming you saved the ToonSnap image here
+      imageUrl: '/toonsnap.webp',
       liveUrl: 'https://toonsnap.art',
       githubUrl: '#',
       tags: ['AI', 'React', 'Next.js', 'Cloud Services', 'Image Generation'],
@@ -15,7 +13,7 @@ const Projects = () => {
     {
       title: 'Un Poco de Tecnología',
       description: 'Technology news portal focusing on web development, gadgets, and industry trends.',
-      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080', // Keeping the placeholder for this one
+      imageUrl: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
       liveUrl: 'https://unpocodetecnologia.es',
       githubUrl: '#',
       tags: ['PHP', 'SEO', 'Content Creation', 'Web Development'],
@@ -23,11 +21,34 @@ const Projects = () => {
     {
       title: 'Rengoku.es',
       description: 'Website for a multi-functional Discord bot, providing command lists, guides, and support information.',
-      // Reference image from public folder
-      imageUrl: '/rengoku.png', // Assuming you saved the Rengoku image here
+      imageUrl: '/rengoku.png',
       liveUrl: 'https://rengoku.es',
       githubUrl: '#',
       tags: ['Discord Bot', 'Community', 'JavaScript', 'Node.js', 'Web Interface'],
+    },
+    {
+      title: "Valentine's Day letter",
+      description: 'Interactive Valentine-themed website with animations.',
+      imageUrl: '/valentine-screenshot.webp',
+      liveUrl: 'https://valentine.itzthelorenz.me/',
+      githubUrl: '#',
+      tags: ['Interactive', 'Animations', 'Frontend', 'Valentine Theme'],
+    },
+    {
+      title: '3D Tree',
+      description: 'Interactive 3D tree visualization with dynamic rendering.',
+      imageUrl: '/tree-visualization-screenshot.webp',
+      liveUrl: 'https://tree.itzthelorenz.me/',
+      githubUrl: '#',
+      tags: ['Interactive', 'JavaScript', '3D'],
+    },
+    {
+      title: 'AIcademy',
+      description: 'Educational platform leveraging AI to provide personalized learning experiences and mentorship.',
+      imageUrl: '/ai-learning-mentor-screenshot.webp',
+      liveUrl: 'https://ai-learning-mentor.windsurf.build/',
+      githubUrl: '#',
+      tags: ['AI', 'Education', 'Mentorship', 'Expo'],
     },
   ];
 
