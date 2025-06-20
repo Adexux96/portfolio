@@ -22,7 +22,7 @@ const Projects = () => {
       title: 'Rengoku.es',
       description: 'Website for a multi-functional Discord bot, providing command lists, guides, and support information.',
       imageUrl: '/rengoku.png',
-      liveUrl: 'https://rengoku.es',
+      liveUrl: 'https://rengoku.pages.dev/',
       githubUrl: '#',
       tags: ['Discord Bot', 'Community', 'JavaScript', 'Node.js', 'Web Interface'],
     },
